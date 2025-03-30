@@ -81,3 +81,41 @@ body {
 .hidden {
   display: none;
 }
+
+.accordion {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-bottom: 1px solid #444;
+  outline: none;
+  transition: background-color 0.2s ease;
+  margin-top: 0.5rem;
+  border-radius: 6px;
+}
+
+.accordion:hover {
+  background-color: #333333;
+}
+
+.panel {
+  padding: 0.5rem 1rem;
+  display: none;
+  background-color: #2a2a2a;
+  border-left: 3px solid #888;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.panel img {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  display: block;
+}

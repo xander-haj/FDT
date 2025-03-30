@@ -20,15 +20,19 @@ body {
 .schematic-inner {
   position: relative;
   height: 100vh;
-  width: max-content;
+  width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
+  white-space: nowrap;
+  touch-action: pan-x;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
 
 /* Schematic image stays full-height */
 #schematic {
   height: 100vh;
-  display: block;
+  display: inline-block;
 }
 
 /* Floating toolbar inside schematic */

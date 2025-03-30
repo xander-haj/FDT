@@ -8,25 +8,24 @@
 </head>
 <body>
 
+  <!-- Toolbar stays on screen -->
+  <div class="floating-toolbar">
+    <button onclick="openModal('chicken')">Chicken Info</button>
+    <button onclick="openModal('missed')">Common Misses</button>
+    <button onclick="openModal('features')">Feature Pallets</button>
+  </div>
+
+  <!-- Dark theme toggle stays bottom-left -->
+  <div class="bottom-left-toggle">
+    <button onclick="toggleTheme()" id="themeToggle">Dark Theme</button>
+  </div>
+
+  <!-- Schematic Scroll Zone -->
   <div class="schematic-container">
     <div class="scrollable-track">
-  
-      <!-- ✅ Floating toolbar scrolls with image and wraps if needed -->
-      <div class="floating-toolbar">
-        <div class="toolbar-row">
-          <button onclick="openModal('chicken')">Chicken Info</button>
-          <button onclick="openModal('missed')">Common Misses</button>
-          <button onclick="openModal('features')">Feature Pallets</button>
-        </div>
-        <div class="toolbar-row">
-          <button onclick="toggleTheme()" id="themeToggle">Dark Theme</button>
-        </div>
-      </div>
-  
       <img src="assets/schematic.png" alt="Freezer Downstack Schematic" id="schematic" />
     </div>
   </div>
-  
 
   <!-- Modal Popups -->
   <div id="modal" class="modal hidden">

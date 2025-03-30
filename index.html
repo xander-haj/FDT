@@ -8,20 +8,24 @@
 </head>
 <body>
 
-  <!-- Fullscreen scrollable schematic with fixed-height image -->
+  <!-- Horizontally scrollable wrapper -->
 <div class="schematic-scroll">
-  <div class="schematic-content">
-    <!-- Floating buttons -->
+  <!-- This container scrolls horizontally and holds both image and buttons -->
+  <div class="schematic-track">
+    
+    <!-- Floating buttons (will now scroll with image) -->
     <div class="floating-toolbar">
       <button onclick="openModal('chicken')">Chicken Info</button>
       <button onclick="openModal('missed')">Common Misses</button>
       <button onclick="openModal('features')">Feature Pallets</button>
     </div>
 
-    <!-- Image -->
+    <!-- Schematic image -->
     <img src="assets/schematic.png" alt="Freezer Downstack Schematic" id="schematic" />
+
   </div>
 </div>
+
 
   <!-- Modal Popups -->
   <div id="modal" class="modal hidden">

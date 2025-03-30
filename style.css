@@ -6,23 +6,24 @@ body {
   overflow: hidden;
 }
 
-/* Fullscreen outer container with vertical scroll allowed */
+/* Makes the screen scrollable horizontally */
 .schematic-scroll {
-  height: 100vh;
   width: 100vw;
-  overflow: auto;
+  height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   touch-action: pan-x pan-y;
-  border: 4px solid red;
 }
 
-/* Horizontally scrollable image wrapper */
-.schematic-content {
-  width: max-content;
-  height: 100%;
+/* This is the inner track that scrolls with schematic and toolbar */
+.schematic-track {
   position: relative;
+  height: 100vh;
+  width: max-content;
   white-space: nowrap;
 }
+
 
 /* Schematic image fills height, scrolls horizontally */
 #schematic {

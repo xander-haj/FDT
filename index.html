@@ -8,16 +8,19 @@
 </head>
 <body>
 
-  <div class="schematic-wrapper">
-    <img src="assets/schematic.png" alt="Freezer Downstack Schematic" id="schematic" />
-    
-    <!-- Overlay Buttons -->
-    <button class="info-button" style="top: 20%; left: 75%;" onclick="openModal('chicken')">Chicken Info</button>
-    <button class="info-button" style="top: 30%; left: 60%;" onclick="openModal('missed')">Common Misses</button>
-    <button class="info-button" style="top: 40%; left: 80%;" onclick="openModal('features')">Feature Pallets</button>
+  <!-- Fixed Top Button Bar -->
+  <div class="top-bar">
+    <button onclick="openModal('chicken')">Chicken Info</button>
+    <button onclick="openModal('missed')">Common Misses</button>
+    <button onclick="openModal('features')">Feature Pallets</button>
   </div>
 
-  <!-- Modals -->
+  <!-- Scrollable Schematic -->
+  <div class="schematic-wrapper">
+    <img src="assets/schematic.jpg" alt="Freezer Downstack Schematic" id="schematic" />
+  </div>
+
+  <!-- Modal Popups -->
   <div id="modal" class="modal hidden">
     <div class="modal-content">
       <span class="close" onclick="closeModal()">&times;</span>

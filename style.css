@@ -6,23 +6,26 @@ body {
   overflow: hidden;
 }
 
-/* Makes the screen scrollable horizontally */
+/* Outer container allows vertical scroll */
 .schematic-scroll {
-  width: 100vw;
   height: 100vh;
+  width: 100vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Inner container does the horizontal scroll — this is the fix */
+.schematic-track {
+  position: relative;
+  height: 100%;
+  width: max-content;
   overflow-x: auto;
   overflow-y: hidden;
+  white-space: nowrap;
   -webkit-overflow-scrolling: touch;
   touch-action: pan-x pan-y;
 }
 
-/* This is the inner track that scrolls with schematic and toolbar */
-.schematic-track {
-  position: relative;
-  height: 100vh;
-  width: max-content;
-  white-space: nowrap;
-}
 
 
 /* Schematic image fills height, scrolls horizontally */

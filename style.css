@@ -1,38 +1,20 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background-color: #1a1a1a;
-  color: white;
-  overflow: hidden;
-}
-
-/* Outer container: vertical scrolling only */
-.schematic-scroll {
-  height: 100vh;
-  width: 100vw;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-/* Inner container: horizontal scroll + toolbar and image */
-.schematic-track {
-  position: relative;
-  height: 100%;
-  width: max-content;
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
+  background-color: var(--bg-color, #ffffff);
+  color: var(--text-color, #000000);
+  overscroll-behavior: contain;
   touch-action: pan-x pan-y;
 }
 
-/* The schematic image */
-#schematic {
+.schematic-container {
+  width: 100vw;
   height: 100vh;
-  display: inline-block;
+  overflow: hidden;
+  position: relative;
 }
 
-/* Floating toolbar anchored to image scroll container */
+/* Buttons always stay top-left inside scrollable image */
 .floating-toolbar {
   position: absolute;
   top: 0.5rem;
@@ -41,31 +23,38 @@ body {
   flex-wrap: wrap;
   gap: 0.5rem;
   z-index: 100;
+  pointer-events: auto;
+}
+
+.scrollable-track {
+  height: 100%;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x pan-y;
+}
+
+#schematic {
+  height: 100vh;
+  display: inline-block;
 }
 
 /* Toolbar button styling using theme variables */
 .floating-toolbar button {
   background-color: var(--button-bg);
   color: var(--button-text);
-  font-weight: bold;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  cursor: pointer;
-}
-
-
-.floating-toolbar button {
-  background: white;
-  color: black;
   font-weight: bold;
+  border-radius: 6px;
   padding: 0.4rem 0.8rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
+
+
+
+
 
 
 

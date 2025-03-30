@@ -2,31 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"/>
   <title>Downstack Schematic</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Horizontally scrollable wrapper -->
-<div class="schematic-scroll">
-  <!-- This container scrolls horizontally and holds both image and buttons -->
-  <div class="schematic-track">
-    
-    <!-- Floating buttons (will now scroll with image) -->
-    <div class="floating-toolbar">
-      <button onclick="openModal('chicken')">Chicken Info</button>
-      <button onclick="openModal('missed')">Common Misses</button>
-      <button onclick="openModal('features')">Feature Pallets</button>
-      <button onclick="toggleTheme()" id="themeToggle">Dark Theme</button>
+  <div class="schematic-container">
+    <div class="scrollable-track">
+      
+      <!--  MOVE toolbar inside scrollable container -->
+      <div class="floating-toolbar">
+        <button onclick="openModal('chicken')">Chicken Info</button>
+        <button onclick="openModal('missed')">Common Misses</button>
+        <button onclick="openModal('features')">Feature Pallets</button>
+        <button onclick="toggleTheme()" id="themeToggle">Dark Theme</button>
+      </div>
+  
+      <img src="assets/schematic.png" alt="Freezer Downstack Schematic" id="schematic" />
     </div>
-
-    <!-- Schematic image -->
-    <img src="assets/schematic.png" alt="Freezer Downstack Schematic" id="schematic" />
-
   </div>
-</div>
-
 
   <!-- Modal Popups -->
   <div id="modal" class="modal hidden">

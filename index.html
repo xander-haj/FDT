@@ -8,16 +8,21 @@
 </head>
 <body>
 
-  <!-- Fixed Top Button Bar -->
-  <div class="top-bar">
-    <button onclick="openModal('chicken')">Chicken Info</button>
-    <button onclick="openModal('missed')">Common Misses</button>
-    <button onclick="openModal('features')">Feature Pallets</button>
-  </div>
+  <!-- Scrollable Schematic Container -->
+  <div class="schematic-outer">
+    <div class="schematic-inner">
+      
+      <!-- Floating Button Bar inside schematic scroll -->
+      <div class="floating-toolbar">
+        <button onclick="openModal('chicken')">Chicken Info</button>
+        <button onclick="openModal('missed')">Common Misses</button>
+        <button onclick="openModal('features')">Feature Pallets</button>
+      </div>
 
-  <!-- Scrollable Schematic -->
-  <div class="schematic-wrapper">
-    <img src="assets/schematic.png" alt="Freezer Downstack Schematic" id="schematic" />
+      <!-- Actual Schematic Image -->
+      <img src="assets/schematic.png" alt="Freezer Downstack Schematic" id="schematic" />
+
+    </div>
   </div>
 
   <!-- Modal Popups -->

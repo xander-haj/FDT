@@ -1,3 +1,29 @@
+/* === Base Theme Variables === */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --button-bg: #ffffff;
+  --button-text: #000000;
+  --button-hover: #dddddd;
+  --panel-bg: #f9f9f9;
+  --accordion-bg: #eeeeee;
+  --accordion-hover: #dddddd;
+  --modal-bg: #ffffff;
+}
+
+body.dark {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --button-bg: #2a2a2a;
+  --button-text: #ffffff;
+  --button-hover: #444444;
+  --panel-bg: #2a2a2a;
+  --accordion-bg: #333333;
+  --accordion-hover: #444444;
+  --modal-bg: #2a2a2a;
+}
+
+/* === General Layout === */
 body {
   margin: 0;
   font-family: sans-serif;
@@ -7,7 +33,7 @@ body {
   overscroll-behavior: contain;
 }
 
-/* Floating toolbar — top center fixed */
+/* === Floating Button Groups === */
 .floating-toolbar {
   position: fixed;
   top: 0.5rem;
@@ -15,15 +41,14 @@ body {
   transform: translateX(-50%);
   display: flex;
   gap: 0.5rem;
-  z-index: 10;
+  z-index: 100;
 }
 
-/* Dark theme toggle — bottom left fixed */
 .bottom-left-toggle {
   position: fixed;
   bottom: 0.5rem;
   left: 0.5rem;
-  z-index: 10;
+  z-index: 100;
 }
 
 .floating-toolbar button,
@@ -34,190 +59,17 @@ body {
   border: none;
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-}
-
-/* Scrollable container for schematic */
-.schematic-container {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-}
-
-.scrollable-track {
-  width: 100%;
-  height: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-  touch-action: pan-x pan-y;
-}
-
-#schematic {
-  height: 100vh;
-  display: inline-block;
-}
-
-.floating-toolbar button {
-  background-color: var(--button-bg, #fff);
-  color: var(--button-text, #000);
-  font-weight: bold;
-  border: none;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-}
-
-
-
-
-
-
-
-
-/* Modal */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 100;
-}
-
-.modal-content {
-  background: #fff;
-  color: black;
-  padding: 20px;
-  max-width: 90%;
-  max-height: 80%;
-  overflow-y: auto;
-  border-radius: 8px;
-  position: relative;
-}
-
-.modal .close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.hidden {
-  display: none;
-}
-
-.accordion {
-  background-color: #1e1e1e;
-  color: #ffffff;
-  cursor: pointer;
-  padding: 0.75rem 1rem;
-  width: 100%;
-  text-align: left;
-  font-size: 1rem;
-  font-weight: bold;
-  border: none;
-  border-bottom: 1px solid #444;
-  outline: none;
   transition: background-color 0.2s ease;
-  margin-top: 0.5rem;
-  border-radius: 6px;
 }
 
-.accordion:hover {
-  background-color: #333333;
+.floating-toolbar button:hover,
+.bottom-left-toggle button:hover {
+  background-color: var(--button-hover);
 }
 
-.panel {
-  padding: 0.5rem 1rem;
-  display: none;
-  background-color: #2a2a2a;
-  border-left: 3px solid #888;
-  border-radius: 6px;
-  margin-bottom: 1rem;
-}
-
-.panel img {
-  width: 100%;
-  max-width: 400px;
-  margin-bottom: 0.5rem;
-  border-radius: 8px;
-  display: block;
-}
-
-/* Light Theme - Default */
-:root {
-  --bg-color: #ffffff;
-  --text-color: #000000;
-  --panel-bg: #f9f9f9;
-  --accordion-bg: #eeeeee;
-  --accordion-hover: #dddddd;
-  --modal-bg: #ffffff;
-  --button-bg: #ffffff;
-  --button-text: #000000;
-}
-
-/* Dark Theme Overrides */
-body.dark {
-  --bg-color: #1a1a1a;
-  --text-color: #ffffff;
-  --panel-bg: #2a2a2a;
-  --accordion-bg: #333333;
-  --accordion-hover: #444444;
-  --modal-bg: #2a2a2a;
-  --button-bg: #2a2a2a;
-  --button-text: #ffffff;
-}
-
-/* Apply theme colors */
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-}
-
-.modal-content {
-  background-color: var(--modal-bg);
-  color: var(--text-color);
-}
-
-.accordion {
-  background-color: var(--accordion-bg);
-  color: var(--text-color);
-}
-
-.accordion:hover {
-  background-color: var(--accordion-hover);
-}
-
-.panel {
-  background-color: var(--panel-bg);
-  color: var(--text-color);
-}
-
-.floating-toolbar button {
-  background-color: var(--button-bg);
-  color: var(--button-text);
-  border: none;
-  font-weight: bold;
-  border-radius: 6px;
-  padding: 0.4rem 0.8rem;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
-}
-
-/* Invert schematic image in dark mode */
-body.dark #schematic {
-  filter: invert(1) hue-rotate(180deg);
-}
-
+/* === Schematic Image + Overlays === */
 #image-container {
   position: relative;
   display: inline-block;
@@ -235,67 +87,103 @@ body.dark #schematic {
 .overlay-button {
   position: absolute;
   transform: translate(-50%, -50%);
-  padding: 4px 10px;
-  background-color: #ffffffcc;
-  border: 1px solid #222;
-  border-radius: 6px;
-  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  background-color: var(--button-bg);
+  color: var(--button-text);
   font-size: 0.9rem;
-  z-index: 10;
+  border: 1px solid #444;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  cursor: pointer;
+  z-index: 50;
 }
 
-/* Position this relative to Apps box */
+/* === Position for Apps Button === */
 #apps-button {
   top: 88%;
   left: 82%;
 }
 
-/* Modal Styles */
+/* === Modal System === */
 .modal {
-  display: none;
   position: fixed;
-  z-index: 9999;
-  left: 0;
   top: 0;
+  left: 0;
+  display: none;
   width: 100vw;
   height: 100vh;
-  overflow-y: auto;
-  background-color: rgba(0, 0, 0, 0.7);
-  justify-content: center;
+  background-color: rgba(0,0,0,0.7);
   align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
 .modal-content {
-  background-color: white;
-  color: black;
-  margin: 10% auto;
+  background-color: var(--modal-bg);
+  color: var(--text-color);
   padding: 20px;
+  max-width: 90%;
+  max-height: 80%;
+  overflow-y: auto;
   border-radius: 8px;
-  width: 90%;
-  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  position: relative;
 }
 
 .close-button {
-  float: right;
+  position: absolute;
+  top: 10px;
+  right: 15px;
   font-size: 1.5rem;
+  font-weight: bold;
   cursor: pointer;
 }
 
-body.dark {
-  background-color: black;
-  color: white;
+.hidden {
+  display: none;
 }
 
-body.dark .overlay-button {
-  background-color: rgba(50, 50, 50, 0.9);
-  color: white;
-  border-color: white;
+/* === Accordion Sections === */
+.accordion {
+  background-color: var(--accordion-bg);
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-bottom: 1px solid #444;
+  outline: none;
+  margin-top: 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
 }
 
-body.dark .modal-content {
-  background-color: #222;
-  color: white;
-  border: 1px solid #ccc;
+.accordion:hover {
+  background-color: var(--accordion-hover);
 }
 
+.panel {
+  display: none;
+  background-color: var(--panel-bg);
+  padding: 0.5rem 1rem;
+  border-left: 3px solid #888;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
 
+.panel img {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  display: block;
+}
+
+/* === Schematic Inversion on Dark Theme === */
+body.dark #schematic {
+  filter: invert(1) hue-rotate(180deg);
+}

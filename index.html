@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"/>
   <title>Freezer Downstacking</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Toolbar buttons -->
-  <div id="top-buttons">
+
+  <!-- Fixed top-center toolbar -->
+  <div class="floating-toolbar">
     <button onclick="openModal('chicken-modal')">Chicken Info</button>
     <button onclick="openModal('misses-modal')">Common Misses</button>
     <button onclick="openModal('features-modal')">Feature Pallets</button>
   </div>
 
-  <!-- Dark theme button at bottom left -->
-  <button id="theme-toggle">Dark Theme</button>
+  <!-- Fixed bottom-left theme toggle -->
+  <div class="bottom-left-toggle">
+    <button onclick="toggleTheme()" id="themeToggle">Dark Theme</button>
+  </div>
 
-  <!-- Image container with overlay button -->
+  <!-- Schematic image and overlay buttons -->
   <div id="image-container">
     <img id="schematic" src="assets/schematic.png" alt="Freezer Schematic">
-    <button id="apps-button" class="overlay-button">Apps Info</button>
+    <button id="apps-button" class="overlay-button" onclick="openModal('apps-modal')">Apps Info</button>
   </div>
 
   <!-- Reusable modal -->
-  <div id="modal" class="modal">
+  <div id="modal" class="modal hidden">
     <div class="modal-content">
       <span class="close-button" onclick="closeModal()">&times;</span>
       <div id="modal-body">
-        <!-- Modal content loaded here dynamically -->
+        <!-- Modal content injected here -->
       </div>
     </div>
   </div>

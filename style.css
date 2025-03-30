@@ -6,43 +6,38 @@ body {
   overflow: hidden;
 }
 
-/* Outer wrapper allows vertical scroll */
-.schematic-outer {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-/* Inner allows horizontal scroll */
-.schematic-inner {
-  position: relative;
+/* Fullscreen outer container with vertical scroll allowed */
+.schematic-scroll {
   height: 100vh;
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-  touch-action: pan-x;
+  width: 100vw;
+  overflow: auto;
   -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
+  touch-action: pan-x pan-y;
+  border: 4px solid red;
 }
 
-/* Schematic image stays full-height */
+/* Horizontally scrollable image wrapper */
+.schematic-content {
+  width: max-content;
+  height: 100%;
+  position: relative;
+  white-space: nowrap;
+}
+
+/* Schematic image fills height, scrolls horizontally */
 #schematic {
   height: 100vh;
   display: inline-block;
 }
 
-/* Floating toolbar inside schematic */
+/* Toolbar floats within scrollable image */
 .floating-toolbar {
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
   display: flex;
   gap: 0.5rem;
-  z-index: 5;
+  z-index: 10;
 }
 
 .floating-toolbar button {
@@ -53,8 +48,9 @@ body {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
+
 
 
 /* Modal */

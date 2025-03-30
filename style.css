@@ -6,7 +6,7 @@ body {
   overflow: hidden;
 }
 
-/* Outer container allows vertical scroll */
+/* Outer container: vertical scrolling only */
 .schematic-scroll {
   height: 100vh;
   width: 100vw;
@@ -14,7 +14,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Inner container does the horizontal scroll — this is the fix */
+/* Inner container: horizontal scroll + toolbar and image */
 .schematic-track {
   position: relative;
   height: 100%;
@@ -26,23 +26,35 @@ body {
   touch-action: pan-x pan-y;
 }
 
-
-
-/* Schematic image fills height, scrolls horizontally */
+/* The schematic image */
 #schematic {
   height: 100vh;
   display: inline-block;
 }
 
-/* Toolbar floats within scrollable image */
+/* Floating toolbar anchored to image scroll container */
 .floating-toolbar {
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
-  z-index: 10;
+  z-index: 100;
 }
+
+/* Toolbar button styling using theme variables */
+.floating-toolbar button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  font-weight: bold;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
 
 .floating-toolbar button {
   background: white;

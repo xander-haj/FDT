@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"/>
-  <title>Downstack Schematic</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freezer Downstacking</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Toolbar stays on screen -->
-  <div class="floating-toolbar">
-    <button onclick="openModal('chicken')">Chicken Info</button>
-    <button onclick="openModal('missed')">Common Misses</button>
-    <button onclick="openModal('features')">Feature Pallets</button>
+  <!-- Toolbar buttons -->
+  <div id="top-buttons">
+    <button onclick="openModal('chicken-modal')">Chicken Info</button>
+    <button onclick="openModal('misses-modal')">Common Misses</button>
+    <button onclick="openModal('features-modal')">Feature Pallets</button>
   </div>
 
-  <!-- Dark theme toggle stays bottom-left -->
-  <div class="bottom-left-toggle">
-    <button onclick="toggleTheme()" id="themeToggle">Dark Theme</button>
+  <!-- Dark theme button at bottom left -->
+  <button id="theme-toggle">Dark Theme</button>
+
+  <!-- Image container with overlay button -->
+  <div id="image-container">
+    <img id="schematic" src="schematic.png" alt="Freezer Schematic">
+    <button id="apps-button" class="overlay-button">Apps Info</button>
   </div>
 
-  <!-- Schematic Scroll Zone -->
-  <div class="schematic-container">
-    <div class="scrollable-track">
-      <img src="assets/schematic.png" alt="Freezer Downstack Schematic" id="schematic" />
-    </div>
-  </div>
-
-  <!-- Modal Popups -->
-  <div id="modal" class="modal hidden">
+  <!-- Reusable modal -->
+  <div id="modal" class="modal">
     <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <div id="modal-body"></div>
+      <span class="close-button" onclick="closeModal()">&times;</span>
+      <div id="modal-body">
+        <!-- Modal content loaded here dynamically -->
+      </div>
     </div>
   </div>
 

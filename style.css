@@ -218,3 +218,84 @@ body.dark #schematic {
   filter: invert(1) hue-rotate(180deg);
 }
 
+#image-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 1600px;
+  overflow-x: auto;
+}
+
+#schematic {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay-button {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 4px 10px;
+  background-color: #ffffffcc;
+  border: 1px solid #222;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  z-index: 10;
+}
+
+/* Position this relative to Apps box */
+#apps-button {
+  top: 88%;
+  left: 82%;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  color: black;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+}
+
+.close-button {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+body.dark {
+  background-color: black;
+  color: white;
+}
+
+body.dark .overlay-button {
+  background-color: rgba(50, 50, 50, 0.9);
+  color: white;
+  border-color: white;
+}
+
+body.dark .modal-content {
+  background-color: #222;
+  color: white;
+  border: 1px solid #ccc;
+}
+
+

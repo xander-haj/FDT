@@ -117,4 +117,43 @@ function toggleTheme() {
   }
 }
 
+function openModal(type) {
+  const modal = document.getElementById('modal');
+  const body = document.getElementById('modal-body');
+  modal.style.display = 'flex';
+
+  if (type === 'apps-modal') {
+    body.innerHTML = `
+      <h2>Apps (A5)</h2>
+      <details open>
+        <summary>Common Boxes</summary>
+        <img src=\"apps1.png\" alt=\"Apps Box 1\">
+        <p>Description for Apps Box 1</p>
+        <img src=\"apps2.png\" alt=\"Apps Box 2\">
+        <p>Description for Apps Box 2</p>
+      </details>
+    `;
+  } else if (type === 'misses-modal') {
+    body.innerHTML = `<h2>Common Misses</h2><p>Content for misses...</p>`;
+  } else if (type === 'chicken-modal') {
+    body.innerHTML = `<h2>Chicken Info</h2><p>Chicken sorting logic...</p>`;
+  } else if (type === 'features-modal') {
+    body.innerHTML = `<h2>Feature Pallets</h2><p>Separate each feature pallet...</p>`;
+  }
+}
+
+function closeModal() {
+  document.getElementById('modal').style.display = 'none';
+}
+
+document.getElementById('apps-button').addEventListener('click', () => {
+  openModal('apps-modal');
+});
+
+document.getElementById('theme-toggle').addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  document.getElementById('theme-toggle').innerText = document.body.classList.contains('dark') ? 'Light Theme' : 'Dark Theme';
+});
+
+
 

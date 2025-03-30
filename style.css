@@ -73,16 +73,19 @@ body {
 #image-container {
   position: relative;
   display: inline-block;
-  width: 100%;
-  max-width: 1600px;
   overflow-x: auto;
+  overflow-y: auto;
+  max-height: 100vh;
 }
 
+
 #schematic {
-  width: 100%;
-  height: auto;
+  height: 100vh;
+  width: auto;
   display: block;
+  object-fit: contain;
 }
+
 
 .overlay-button {
   position: absolute;

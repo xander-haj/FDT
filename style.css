@@ -128,3 +128,68 @@ body {
   border-radius: 8px;
   display: block;
 }
+
+/* Light Theme - Default */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --panel-bg: #f9f9f9;
+  --accordion-bg: #eeeeee;
+  --accordion-hover: #dddddd;
+  --modal-bg: #ffffff;
+  --button-bg: #ffffff;
+  --button-text: #000000;
+}
+
+/* Dark Theme Overrides */
+body.dark {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --panel-bg: #2a2a2a;
+  --accordion-bg: #333333;
+  --accordion-hover: #444444;
+  --modal-bg: #2a2a2a;
+  --button-bg: #2a2a2a;
+  --button-text: #ffffff;
+}
+
+/* Apply theme colors */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.modal-content {
+  background-color: var(--modal-bg);
+  color: var(--text-color);
+}
+
+.accordion {
+  background-color: var(--accordion-bg);
+  color: var(--text-color);
+}
+
+.accordion:hover {
+  background-color: var(--accordion-hover);
+}
+
+.panel {
+  background-color: var(--panel-bg);
+  color: var(--text-color);
+}
+
+.floating-toolbar button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+/* Invert schematic image in dark mode */
+body.dark #schematic {
+  filter: invert(1) hue-rotate(180deg);
+}
+

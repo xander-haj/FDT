@@ -105,3 +105,16 @@ function openModal(type) {
   enableDropdowns();
 }
 
+function toggleTheme() {
+  const body = document.body;
+  const toggleBtn = document.getElementById('themeToggle');
+  body.classList.toggle('dark');
+
+  if (body.classList.contains('dark')) {
+    toggleBtn.innerText = 'Light Theme';
+  } else {
+    toggleBtn.innerText = 'Dark Theme';
+  }
+}
+
+

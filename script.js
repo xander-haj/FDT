@@ -28,7 +28,6 @@ const content = {
     <button class="accordion">A4 Chicken</button>
     <div class="panel">
       <p>Chicken Strips</p>
-      <br>
       
       <p>Chicken Nuggets</p>
       
@@ -47,7 +46,7 @@ const content = {
       <p>Greek Style Pita</p>
       <img src="https://github.com/clubwallytraining/Frozen-Downstacking/raw/main/resources/misplaced%20boxes/Deli/Sweet%20Baked%20Goods.png" alt=" Sweet Baked Goods" />
       <p>Sweet Baked Goods</p>
-      <img src="https://github.com/clubwallytraining/Frozen-Downstacking/raw/main/resources/misplaced%20boxes/Deli/Sweet%20Baked%20Goods.png" alt="Belgian Waffles" />
+      <img src="https://github.com/clubwallytraining/Frozen-Downstacking/raw/main/resources/misplaced%20boxes/Deli/St%20Pierre%20Waffles.png" alt="Belgian Waffles" />
       <p>Belgian Waffles</p>
     </div>
 
@@ -63,10 +62,7 @@ const content = {
       <p>Please separate from regular freight onto a separate pallet.</p>
     </div>
 
-    <button class="accordion">Separation Reminder</button>
-    <div class="panel">
-      <p>Always separate feature quantity onto their own pallet and place them in the freezer to downstack on later.</p>
-    </div>
+    
   `
 };
 

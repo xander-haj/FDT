@@ -3,7 +3,7 @@ const modalBody = document.getElementById('modal-body');
 
 const content = {
   chicken: `
-    <h2>These are drop down menus now, click the "►" below to see the images</h2>
+    <h2>These are drop down menus now, click the button below to see the images</h2>
 
     <button class="accordion">Bunker Chicken (scans as A31)</button>
     <div class="panel">
@@ -15,23 +15,23 @@ const content = {
       <p>Top Chick</p>
     </div>
 
-    <button class="accordion">Apps (NOT 40lb boxes of Bunker Chicken Wings)</button>
+    <button class="accordion">Apps</button>
     <div class="panel">
-      <img src="assets/apps_1.jpg" alt="Wyngz" />
+      <img src="https://github.com/clubwallytraining/Frozen-Downstacking/raw/main/resources/misplaced%20boxes/Apps/Wyngz.png" alt="Wyngz" />
       <p>Wyngz</p>
-      <img src="assets/apps_2.jpg" alt="Chicken Bites" />
+      <img src="https://github.com/clubwallytraining/Frozen-Downstacking/raw/main/resources/misplaced%20boxes/Apps/tyson%20bites.png" alt="Chicken Bites" />
       <p>Chicken Bites</p>
-      <img src="assets/apps_3.jpg" alt="Popcorn Chicken" />
+      <img src="https://github.com/clubwallytraining/Frozen-Downstacking/raw/main/resources/misplaced%20boxes/Apps/tyson%20chicken%20fries.png" alt="Popcorn Chicken" />
       <p>Popcorn Chicken</p>
     </div>
 
     <button class="accordion">A4 Chicken</button>
     <div class="panel">
-      <img src="assets/a4chicken_1.jpg" alt="Chicken Strips" />
       <p>Chicken Strips</p>
-      <img src="assets/a4chicken_2.jpg" alt="Chicken Nuggets" />
+      <br>
+      
       <p>Chicken Nuggets</p>
-      <img src="assets/a4chicken_3.jpg" alt="Chicken Patties" />
+      
       <p>Chicken Patties</p>
     </div>
   `,
@@ -39,32 +39,28 @@ const content = {
   missed: `
     <h2>Common Misplaced Boxes</h2>
 
-    <button class="accordion">Breakfast Items</button>
+    <button class="accordion">Deli</button>
     <div class="panel">
-      <img src="assets/breakfast_miss_1.jpg" alt="Breakfast Burritos" />
-      <p>Breakfast Burritos (belongs in A6 13–23)</p>
+      <img src="https://github.com/clubwallytraining/Frozen-Downstacking/raw/main/resources/misplaced%20boxes/Deli/Kings%20Hawaiian.png" alt="King Hawaiian Rolls" />
+      <p>King Hawaiian rolls</p>
+      <img src="https://github.com/clubwallytraining/Frozen-Downstacking/raw/main/resources/misplaced%20boxes/Deli/Pita%20Bread.png" alt="Greek Style Pita" />
+      <p>Greek Style Pita</p>
+      <img src="https://github.com/clubwallytraining/Frozen-Downstacking/raw/main/resources/misplaced%20boxes/Deli/Sweet%20Baked%20Goods.png" alt=" Sweet Baked Goods" />
+      <p>Sweet Baked Goods</p>
+      <img src="https://github.com/clubwallytraining/Frozen-Downstacking/raw/main/resources/misplaced%20boxes/Deli/Sweet%20Baked%20Goods.png" alt="Belgian Waffles" />
+      <p>Belgian Waffles</p>
     </div>
 
-    <button class="accordion">Seafood Confusion</button>
-    <div class="panel">
-      <img src="assets/seafood_miss_1.jpg" alt="Shrimp Tempura" />
-      <p>Shrimp Tempura (belongs in Seafood)</p>
-    </div>
-
-    <button class="accordion">Top Chick Placement</button>
-    <div class="panel">
-      <img src="assets/topchick_miss.jpg" alt="Top Chick" />
-      <p>Top Chick should be placed with Bunker Chicken (A31)</p>
-    </div>
+    
   `,
 
   features: `
     <h2>Feature Pallets</h2>
 
-    <button class="accordion">Uncrustables</button>
+    <button class="accordion">Features</button>
     <div class="panel">
-      <img src="assets/uncrustables_feature.jpg" alt="Uncrustables stacked incorrectly" />
-      <p>Often misstacked. Place separately from regular freight.</p>
+      <img src="https://github.com/clubwallytraining/Frozen-Downstacking/raw/main/resources/feature%20pallet.png" alt="Features Pallets" />
+      <p>Please separate from regular freight onto a separate pallet.</p>
     </div>
 
     <button class="accordion">Separation Reminder</button>
@@ -105,16 +101,16 @@ function openModal(type) {
   enableDropdowns();
 }
 
-function toggleTheme() {
-  const body = document.body;
-  const toggleBtn = document.getElementById('themeToggle');
-  body.classList.toggle('dark');
+//function toggleTheme() {
+  //const body = document.body;
+  //const toggleBtn = document.getElementById('themeToggle');
+  //body.classList.toggle('dark');
 
-  if (body.classList.contains('dark')) {
-    toggleBtn.innerText = 'Light Theme';
-  } else {
-    toggleBtn.innerText = 'Dark Theme';
-  }
-}
+ // if (body.classList.contains('dark')) {
+    //toggleBtn.innerText = 'Light Theme';
+ // } else {
+   // toggleBtn.innerText = 'Dark Theme';
+ // }
+//}
 
 

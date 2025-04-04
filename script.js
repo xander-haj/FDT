@@ -7,11 +7,11 @@ const content = {
 
     <button class="accordion">Bunker Chicken (scans as A31)</button>
     <div class="panel">
-      <img src="assets/bunker_chicken_1.jpg" alt="40 pound boxes of beef and chicken" />
+      <img src="https://github.com/clubwallytraining/Frozen-Downstacking/raw/main/resources/misplaced%20boxes/Bunker%20Chicken/40poundchicken.png" alt="40 pound boxes of beef and chicken" />
       <p>40 pound boxes of beef and Chicken</p>
-      <img src="assets/bunker_chicken_2.jpg" alt="Beef/Turkey Rolls" />
+      <img src="https://github.com/clubwallytraining/Frozen-Downstacking/raw/main/resources/misplaced%20boxes/Bunker%20Chicken/beef%20turkey%20rolls.png" alt="Beef/Turkey Rolls" />
       <p>Beef/Turkey Rolls</p>
-      <img src="assets/bunker_chicken_3.jpg" alt="Top Chick" />
+      <img src="https://github.com/clubwallytraining/Frozen-Downstacking/raw/main/resources/misplaced%20boxes/Bunker%20Chicken/topchick.png" alt="Top Chick" />
       <p>Top Chick</p>
     </div>
 
